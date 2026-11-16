@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>제주 3박 4일 힐링 여행</title>
+<meta name="description" content="2026.12.28~12.31 연인과 함께하는 제주 3박 4일 일정">
+<style>
+:root{
+  --primary:#FFC800; --primary-dark:#E5A800; --sea:#2FA6B8; --orange:#FF7A45;
+  --text:#222; --sub:#6B7280; --border:#E5E7EB; --bg:#fff; --bg2:#FFF9E5; --card:#fff;
+  --shadow:0 2px 8px rgba(0,0,0,.08);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){--text:#f1f1f1;--sub:#a0a7b4;--border:#333a44;--bg:#14171c;--bg2:#1d1b12;--card:#1c2027;--shadow:0 2px 8px rgba(0,0,0,.5);}
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Pretendard,"Noto Sans KR","Malgun Gothic",sans-serif;color:var(--text);background:var(--bg);line-height:1.6;font-size:15px}
+a{color:var(--sea)}
+.skip{position:absolute;left:-999px;top:0;background:var(--primary);color:#000;padding:8px 12px;z-index:100}
+.skip:focus{left:8px;top:8px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 16px}
+.hero{background:linear-gradient(135deg,var(--primary),#ffe27a);color:#222;padding:40px 0 32px}
+.hero h1{margin:0 0 6px;font-size:28px}
+.hero p{margin:0 0 16px}
+.facts{display:flex;flex-wrap:wrap;gap:8px;padding:0;margin:0;list-style:none}
+.facts li{background:rgba(255,255,255,.75);border-radius:999px;padding:6px 14px;font-weight:600;font-size:14px}
+nav.tabs{position:sticky;top:0;z-index:20;background:var(--bg);border-bottom:1px solid var(--border)}
+nav.tabs .wrap{display:flex;gap:4px;overflow-x:auto}
+nav.tabs a{flex:0 0 auto;padding:14px 14px;text-decoration:none;color:var(--sub);font-weight:600;border-bottom:3px solid transparent;min-height:44px}
+nav.tabs a:hover,nav.tabs a.on{color:var(--text);border-bottom-color:var(--primary-dark)}
+section{padding:32px 0}
+section.alt{background:var(--bg2)}
+h2{font-size:22px;margin:0 0 6px}
+.lead{color:var(--sub);margin:0 0 20px}
+.overview{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.ov{background:var(--card);border-radius:12px;box-shadow:var(--shadow);padding:16px;text-decoration:none;color:inherit;border:1px solid var(--border)}
+.ov b{display:inline-block;background:var(--primary);color:#222;border-radius:6px;padding:1px 8px;font-size:12px}
+.ov h3{margin:8px 0 4px;font-size:17px}
+.ov p{margin:0;color:var(--sub);font-size:13px}
+.day-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:10px;margin-bottom:6px}
+.badge-day{background:var(--primary);color:#222;font-weight:700;border-radius:6px;padding:2px 10px;font-size:13px}
+.timeline{list-style:none;margin:20px 0 0;padding:0 0 0 18px;border-left:2px dotted var(--primary-dark)}
+.item{position:relative;margin:0 0 18px;background:var(--card);border:1px solid var(--border);border-radius:12px;box-shadow:var(--shadow);overflow:hidden;display:grid;grid-template-columns:240px 1fr}
+.item::before{content:"";position:absolute;left:-26px;top:20px;width:12px;height:12px;border-radius:50%;background:var(--primary);border:2px solid var(--bg)}
+.item.nophoto{grid-template-columns:1fr}
+.photos{display:flex;flex-direction:column;gap:2px;background:var(--border)}
+.photos img{width:100%;height:100%;min-height:150px;max-height:240px;object-fit:cover;display:block}
+.photos img+img{max-height:120px}
+.body{padding:14px 16px}
+.time{font-weight:700}
+.badge{display:inline-block;border-radius:999px;padding:1px 10px;font-size:12px;font-weight:700;margin-left:6px;color:#222}
+.b-식사{background:#ffd0bd}.b-카페{background:#bfe9ef}.b-관광{background:#ffe27a}.b-이동{background:#e5e7eb}.b-쇼핑{background:#e3d4ff}.b-숙소{background:#d3ecc8}
+.item h3{margin:6px 0 4px;font-size:18px}
+.item p{margin:4px 0}
+.meta{color:var(--sub);font-size:13px;margin:6px 0 0;padding:0;list-style:none}
+.meta li{margin:2px 0}
+.warn{background:var(--bg2);border-left:4px solid var(--orange);padding:6px 10px;border-radius:4px;font-size:13px;margin-top:8px}
+.credit{font-size:12px;color:var(--sub);margin-top:8px}
+table{width:100%;border-collapse:collapse;background:var(--card);border-radius:12px;overflow:hidden;box-shadow:var(--shadow)}
+th{background:var(--bg2);text-align:left}
+th,td{padding:10px 12px;border-bottom:1px solid var(--border)}
+td.num{text-align:right;font-weight:700;color:var(--orange);white-space:nowrap}
+.checks{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+.checks li{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:10px 12px}
+.checks label{display:flex;gap:10px;align-items:flex-start;cursor:pointer}
+.checks input{width:20px;height:20px;margin-top:2px;accent-color:var(--primary-dark)}
+.checks input:checked+span{text-decoration:line-through;color:var(--sub)}
+footer{background:#222;color:#ccc;padding:24px 0;font-size:13px}
+footer a{color:var(--primary)}
+@media (max-width:900px){.overview{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:640px){
+  .overview,.checks{grid-template-columns:1fr}
+  .item{grid-template-columns:1fr}
+  .photos{flex-direction:row}
+  .photos img,.photos img+img{max-height:180px;min-height:140px}
+  .hero h1{font-size:24px}
+  th,td{padding:8px}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">본문으로 바로가기</a>
+
+<header class="hero">
+  <div class="wrap">
+    <h1>제주 3박 4일 힐링 여행</h1>
+    <p>느긋하게 걷고, 바다를 보고, 맛있게 먹는 연말 제주</p>
+    <ul class="facts">
+      <li>📅 2026.12.28(월) ~ 12.31(목)</li>
+      <li>👫 2명</li>
+      <li>✈️ 대구 ↔ 제주</li>
+      <li>🏡 중문 펜션 3박</li>
+      <li>🚗 렌트카 교대 운전</li>
+      <li>💰 약 200만원</li>
+    </ul>
+  </div>
+</header>
+
+<nav class="tabs" aria-label="섹션 이동">
+  <div class="wrap" id="tabs">
+    <a href="#overview">한눈에 보기</a>
+    <a href="#day1">1일차</a>
+    <a href="#day2">2일차</a>
+    <a href="#day3">3일차</a>
+    <a href="#day4">4일차</a>
+    <a href="#budget">예산</a>
+    <a href="#checklist">체크리스트</a>
+  </div>
+</nav>
+
+<main id="main">
+  <section id="overview">
+    <div class="wrap">
+      <h2>한눈에 보기</h2>
+      <p class="lead">12월 일몰은 약 17:20. 야외 일정은 낮에, 하루 2~3곳만 느긋하게 다닙니다.</p>
+      <div class="overview" id="ov"></div>
+    </div>
+  </section>
+
+  <div id="days"></div>
+
+  <section id="budget" class="alt">
+    <div class="wrap">
+      <h2>예산 (약 200만원)</h2>
+      <p class="lead">아래 배분은 일반적인 추정치입니다. 연말 성수기라 항공·숙박·렌트카가 오를 수 있고, 식당·카페 가격은 공식 출처에서 확인되지 않아 포함하지 않았습니다.</p>
+      <table>
+        <thead><tr><th>항목</th><th>추정 비용</th><th>비율</th></tr></thead>
+        <tbody>
+          <tr><td>항공권 (왕복 2인)</td><td class="num">약 40~50만원</td><td>약 22%</td></tr>
+          <tr><td>숙박 (펜션 3박)</td><td class="num">약 60~70만원</td><td>약 33%</td></tr>
+          <tr><td>렌트카 + 유류</td><td class="num">약 25~30만원</td><td>약 14%</td></tr>
+          <tr><td>식비</td><td class="num">약 40~50만원</td><td>약 22%</td></tr>
+          <tr><td>관광·입장료·기타</td><td class="num">약 15~20만원</td><td>약 9%</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="checklist">
+    <div class="wrap">
+      <h2>예약 · 확인 체크리스트</h2>
+      <p class="lead">체크 상태는 이 브라우저에만 저장됩니다.</p>
+      <ul class="checks" id="checks"></ul>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><strong>사진·정보 출처</strong>: 제주관광공사 <a href="https://www.visitjeju.net/kr" target="_blank" rel="noopener">비짓제주(Visitjeju.net)</a>, 서귀포시 E-Ticket, 한국공항공사. 사진 저작권은 각 기관에 있으며, 공공누리 표기가 없어 <strong>개인 여행 계획 참고용</strong>으로만 사용합니다. 공개 배포 전 이용약관을 확인하세요.</p>
+    <p>가격·운영시간은 2026-11-16 기준 확인된 값만 적었고, 확인하지 못한 값은 '미확인'입니다. 방문 전 꼭 다시 확인하세요.</p>
+  </div>
+</footer>
+
+<script>
+const DAYS = [
+ {id:"day1", n:1, date:"12/28 (월)", title:"도착 · 애월 해안 드라이브", sum:"공항 → 애월 → 중문",
+  note:"항공 시간은 가정(대구 10:00 출발)입니다. 실제 시간에 맞춰 조정하세요.",
+  items:[
+   {t:"10:00~11:30", c:"이동", name:"대구 → 제주공항 · 렌트카 수령", img:["1일차/01_제주공항.webp"],
+    d:"대구공항 출발, 약 1시간 후 제주공항 도착. 렌트카 수령 시 운전자 2명 등록과 차량 상태를 확인합니다.",
+    meta:["제주공항 종합안내 064-797-2526","렌트카 업체·요금: 미확인"], link:["https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000019568","비짓제주 제주국제공항"]},
+   {t:"12:30", c:"식사", name:"올래국수 본점 (고기국수)", img:["1일차/02_올래국수.webp"],
+    d:"제주 대표 음식 고기국수로 점심.",
+    meta:["제주시 귀아랑길 24","08:30 오픈 · 일요일 휴무 (12/28은 월요일, 영업일)","064-742-7355 · 가격 미확인","전용 주차장 없음, 인근 유료주차장"],
+    link:["https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000020099","비짓제주 올래국수 본점"]},
+   {t:"14:00", c:"관광", name:"애월 한담해안산책로", img:["1일차/03_한담해안산책로.webp"],
+    d:"곽지~한담 해안길을 1시간 정도 가볍게 걷습니다. 바람이 강하니 방한 준비를 합니다.",
+    meta:["애월읍 곽지리 · 상시 개방","요금 기재 없음"], link:["https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000020159","비짓제주 한담해안산책로"]},
+   {t:"15:00", c:"카페", name:"봄날 (애월 오션뷰 카페)", img:["1일차/04_봄날.webp"],
+    d:"일몰 전 바다를 보며 커피 타임.",
+    meta:["애월로1길 25","0507-1494-4999","영업시간·가격 미확인, 주차장 혼잡 가능"], link:["https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000018337","비짓제주 봄날"]},
+   {t:"17:30", c:"숙소", name:"중문 펜션 체크인", img:[],
+    d:"펜션은 아직 미정입니다. 주차 가능, 난방 양호, 바다·정원 뷰 조건으로 고르세요. 장보기(물·간식·아침거리)도 이때.",
+    meta:["연말 성수기: 서둘러 예약"]},
+   {t:"19:00", c:"식사", name:"사해방흑돼지 (제주 흑돼지)", img:["1일차/06_사해방흑돼지.webp"],
+    d:"첫날 저녁은 흑돼지 근고기.",
+    meta:["비짓제주 등재 식당(후보 선정, 예약 권장)","영업시간·가격 미확인"]}
+  ]},
+ {id:"day2", n:2, date:"12/29 (화)", title:"중문관광단지 힐링", sum:"천제연 · 주상절리 · 식물원",
+  note:"여미지식물원은 동절기 입장 17:00 권장이라 16:30 도착은 옥외정원 시간이 빠듯합니다. 식물원을 앞당기는 것을 고려하세요.",
+  items:[
+   {t:"11:00", c:"관광", name:"천제연폭포", img:["2일차/01_천제연폭포.jpg"],
+    d:"중문 대표 3단 폭포. 계단이 있어 편한 신발이 좋습니다.",
+    meta:["서귀포시 E-Ticket 정보 기준","일몰에 따라 관람시간 변동 가능"]},
+   {t:"12:30", c:"식사", name:"색달식당 순살갈치조림 서귀포본점", img:["2일차/02_색달식당_갈치조림.jpg","2일차/02_색달식당_외관.jpg"],
+    d:"제주 향토음식 갈치조림 점심.", meta:["가격 미확인"]},
+   {t:"14:00", c:"관광", name:"중문·대포해안 주상절리대", img:["2일차/03_주상절리대_전망.jpg","2일차/03_주상절리대_기암.jpg"],
+    d:"파도가 높은 날 특히 장관인 해안 절경.",
+    meta:["입장료 미확인","주차: 본문은 무료, 리뷰는 유료로 상충 → 현장 확인"],
+    warn:"파도·기상에 따라 통제될 수 있습니다."},
+   {t:"15:00", c:"카페", name:"더클리프 (오션뷰 카페)", img:["2일차/04_더클리프_1.jpg","2일차/04_더클리프_2.jpg"],
+    d:"중문 바다가 보이는 카페. 사진은 야간 촬영본입니다.", meta:["가격 미확인"]},
+   {t:"16:30", c:"관광", name:"여미지식물원", img:["2일차/05_여미지식물원_온실.jpg","2일차/05_여미지식물원_전경.jpg"],
+    d:"겨울에도 따뜻한 실내 온실 중심 힐링 코스.",
+    meta:["성인 요금: 한국관광공사 12,000원 / 운영사 9,000원으로 불일치"],
+    warn:"동절기 입장 17:00 권장. 도착 시간을 앞당기세요."},
+   {t:"18:30", c:"식사", name:"제주미향 중문본점 (해산물)", img:["2일차/06_제주미향_회상차림.jpg","2일차/06_제주미향_한상.jpg"],
+    d:"회·해물뚝배기·성게국 등 해산물 저녁.", meta:["비짓제주 등재 식당(후보 선정)","가격 미확인"]}
+  ]},
+ {id:"day3", n:3, date:"12/30 (수)", title:"서남쪽 바다 · 방어 제철 미식", sum:"용머리해안 · 모슬포 · 송악산",
+  note:"송악산 둘레길은 공사 안내(2026.05.11~07.31, 연장 가능)가 있어 12월 통제 여부를 출발 전에 문의하세요.",
+  items:[
+   {t:"11:00", c:"관광", name:"용머리해안", img:["3일차/01_용머리해안.jpg"],
+    d:"산방산 아래 해안 산책로.", meta:["입장료: 공식 페이지에 금액 없음(미확인)"],
+    warn:"만조·파도·기상에 따라 관람시간이 바뀌거나 전면 통제될 수 있습니다. 대체: 산방산 주변 산책."},
+   {t:"12:30", c:"식사", name:"수눌음 (모슬포 방어회)", img:["3일차/02_수눌음.jpg"],
+    d:"12월 제철 방어회 점심.", meta:["월요일 휴무 (12/30 수요일은 영업)","브레이크타임 14:30~16:00","가격 미확인"]},
+   {t:"14:00", c:"관광", name:"송악산 둘레길", img:["3일차/03_송악산둘레길.jpg"],
+    d:"바다와 형제섬이 보이는 산책길, 약 1시간.", meta:["운영시간·요금 미확인"],
+    warn:"공사 안내 있음. 통제 여부 확인 필요."},
+   {t:"15:30", c:"카페", name:"커피스케치 (사계 일대 카페)", img:["3일차/04_커피스케치.jpg"],
+    d:"오늘의 휴식 타임. 사진은 음료 사진이라 오션뷰는 보이지 않습니다.", meta:["가격 미확인"]},
+   {t:"19:00", c:"식사", name:"숙소 바비큐 또는 신우성흑돼지 중문점", img:["3일차/05_신우성흑돼지중문점.jpg"],
+    d:"연말 분위기의 저녁. 숙소 바비큐가 우선이고, 외식이면 흑돼지 식당을 후보로. 1일차 저녁과 겹치면 다른 메뉴로 바꾸세요.",
+    meta:["영업시간·가격 미확인"]}
+  ]},
+ {id:"day4", n:4, date:"12/31 (목)", title:"여유로운 마무리 · 귀국", sum:"새연교 · 서귀포 · 공항",
+  note:"귀국 항공은 오후(16:00)로 가정했습니다. 공항에는 최소 1시간 30분 전에 도착하세요.",
+  items:[
+   {t:"10:00", c:"숙소", name:"펜션 체크아웃 · 주유", img:[], d:"짐 정리 후 체크아웃. 렌트카 반납 전에 주유 계획을 확인하세요."},
+   {t:"10:30", c:"관광", name:"새연교 · 새섬 · 서귀포항 산책", img:["4일차/01_새연교.jpg","4일차/02_새섬.jpg"],
+    d:"마지막 가벼운 산책.", meta:["새섬 요금·새연교 운영시간 미확인"]},
+   {t:"12:00", c:"식사", name:"진주식당 (전복죽 · 성게미역국)", img:["4일차/04_진주식당.jpg","4일차/04_진주식당_2.jpg"],
+    d:"서귀포 시내 마지막 점심.", meta:["064-762-5158","운영시간·휴무·가격 미확인"],
+    warn:"12/31 영업 여부를 전화로 확인하세요. (대우정은 목요일 휴무라 제외)"},
+   {t:"13:30", c:"쇼핑", name:"기념품 (샵제주 공항점 등)", img:["4일차/06_샵제주공항점.jpg"],
+    d:"공항 가는 길에 감귤 제품 등 기념품. 감귤초콜릿 취급 여부는 미확인입니다."},
+   {t:"14:30", c:"이동", name:"제주공항 렌트카 반납", img:["4일차/05_렌터카반납.jpeg"],
+    d:"주유 후 반납. 세부 절차는 렌트카 업체 안내를 따르세요.", meta:["사진은 저해상도"]},
+   {t:"16:00", c:"이동", name:"제주공항 → 대구공항", img:[], d:"귀국."}
+  ]}
+];
+const CHECKS = [
+ "항공권 대구↔제주 예약 (12/28, 12/31)",
+ "중문 인근 펜션 3박 예약 (연말 성수기)",
+ "렌트카 예약 (운전자 2명 등록, 보험·겨울 상태 확인)",
+ "진주식당 12/31 영업 여부 전화 확인 (064-762-5158)",
+ "송악산 둘레길 공사·통제 여부 문의",
+ "용머리해안·주상절리대·천제연폭포 통제·운영시간 확인",
+ "여미지식물원 요금·동절기 입장 마감 확인",
+ "출발 전 일기예보 확인, 날씨 나쁘면 일차 순서 교체"
+];
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const enc=p=>p.split("/").map(encodeURIComponent).join("/");
+
+document.getElementById("ov").innerHTML = DAYS.map(d=>
+ `<a class="ov" href="#${d.id}"><b>DAY ${d.n}</b><h3>${esc(d.title)}</h3><p>${esc(d.date)} · ${esc(d.sum)}</p></a>`).join("");
+
+document.getElementById("days").innerHTML = DAYS.map((d,i)=>`
+<section id="${d.id}" class="${i%2?'alt':''}"><div class="wrap">
+  <div class="day-head"><span class="badge-day">DAY ${d.n}</span><h2>${esc(d.title)}</h2><span class="lead" style="margin:0">${esc(d.date)}</span></div>
+  <p class="lead">${esc(d.note)}</p>
+  <ol class="timeline">${d.items.map(it=>`
+    <li class="item ${it.img&&it.img.length?'':'nophoto'}">
+      ${it.img&&it.img.length?`<div class="photos">${it.img.map(src=>`<img src="${enc(src)}" alt="${esc(it.name)}" loading="lazy">`).join("")}</div>`:""}
+      <div class="body">
+        <span class="time">${esc(it.t)}</span><span class="badge b-${esc(it.c)}">${esc(it.c)}</span>
+        <h3>${esc(it.name)}</h3>
+        <p>${esc(it.d||"")}</p>
+        ${it.meta?`<ul class="meta">${it.meta.map(m=>`<li>${esc(m)}</li>`).join("")}</ul>`:""}
+        ${it.warn?`<div class="warn">⚠️ ${esc(it.warn)}</div>`:""}
+        ${it.link?`<p class="credit">출처: <a href="${esc(it.link[0])}" target="_blank" rel="noopener">${esc(it.link[1])}</a></p>`:(it.img&&it.img.length?`<p class="credit">사진: 제주관광공사 등 공식 출처 (개인 참고용)</p>`:"")}
+      </div>
+    </li>`).join("")}</ol>
+</div></section>`).join("");
+
+const store={get(k){try{return JSON.parse(localStorage.getItem(k))||{}}catch(e){return {}}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
+const saved=store.get("jeju-checks");
+document.getElementById("checks").innerHTML=CHECKS.map((c,i)=>
+ `<li><label><input type="checkbox" data-i="${i}" ${saved[i]?"checked":""}><span>${esc(c)}</span></label></li>`).join("");
+document.getElementById("checks").addEventListener("change",e=>{
+  const s=store.get("jeju-checks");s[e.target.dataset.i]=e.target.checked;store.set("jeju-checks",s);
+});
+
+const links=[...document.querySelectorAll("#tabs a")];
+const secs=links.map(a=>document.querySelector(a.getAttribute("href")));
+const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){links.forEach(l=>l.classList.toggle("on",l.getAttribute("href")==="#"+e.target.id));}})},{rootMargin:"-40% 0px -55% 0px"});
+secs.forEach(s=>s&&io.observe(s));
+</script>
+</body>
+</html>
